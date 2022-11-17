@@ -1,5 +1,6 @@
-class BookmarksController < ApplicationController
+# frozen_string_literal: true
 
+class BookmarksController < ApplicationController
   def new
     @list = List.find(params[:list_id])
     @bookmark = Bookmark.new
@@ -11,12 +12,10 @@ class BookmarksController < ApplicationController
     @bookmark.list = @list
 
     if @bookmark.save
-      redirect_to list_path(@list), notice: "Bookmark was successfully created."
+      redirect_to list_path(@list), notice: 'Bookmark was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
-
-
   end
 
   def destroy
