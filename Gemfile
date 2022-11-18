@@ -75,3 +75,5 @@ gem 'simple_form', github: 'heartcombo/simple_form'
 
 gem 'faker'
 gem 'simple_form', github: 'heartcombo/simple_form'
+
+gem 'rest-client'
